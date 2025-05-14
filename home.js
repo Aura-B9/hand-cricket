@@ -1,10 +1,10 @@
 "use strict";
-let overs = 1;
+let overs = 10;
 let chance = overs * 6 ;
 let Swick = 2; //selected wick 
 let Dwick = 0; // done wick
 let Druns = 0; // done runs
-let Sruns = 10;//selected runs
+let Sruns = 10000;//selected runs
 let click = 0;
 let user;
 
@@ -17,7 +17,7 @@ function gamePlay(){
 
 document.getElementById("btn0").onclick = function(){
    
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 0;
         click++;
@@ -51,13 +51,17 @@ document.getElementById("btn0").onclick = function(){
         console.log(`click:${click}`);
     }
     
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn1").onclick = function(){
         
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
     
         user = 1;
         click++;
@@ -90,13 +94,18 @@ document.getElementById("btn1").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn2").onclick = function(){
 
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 2;
         click++;
@@ -129,13 +138,18 @@ document.getElementById("btn2").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn3").onclick = function(){
 
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 3;
         click++;
@@ -168,13 +182,18 @@ document.getElementById("btn3").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn4").onclick = function(){
 
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 4;
         click++;
@@ -207,13 +226,18 @@ document.getElementById("btn4").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn5").onclick = function(){
 
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 5;
         click++;
@@ -246,13 +270,18 @@ document.getElementById("btn5").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
 document.getElementById("btn6").onclick = function(){
 
-    if (click < chance){
+    if (click < chance && Dwick != Swick && Druns < Sruns){
 
         user = 6;
         click++;
@@ -285,8 +314,12 @@ document.getElementById("btn6").onclick = function(){
         }
         console.log(`click:${click}`);
     }
+
+    else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
+        document.getElementById("resutD").innerHTML = "You won!";  
+    }
+
     else {
-        console.log("game over!!");
+        document.getElementById("resutD").innerHTML = "Game Over!";
     }
 }
-
