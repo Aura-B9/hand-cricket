@@ -1,10 +1,10 @@
 "use strict";
-let overs = 10;
+let overs = 1;
 let chance = overs * 6 ;
 let Swick = 2; //selected wick 
 let Dwick = 0; // done wick
 let Druns = 0; // done runs
-let Sruns = 10000;//selected runs
+let Sruns = 100;//selected runs
 let click = 0;
 let user;
 
@@ -13,6 +13,18 @@ let num1 , num2;
 function gamePlay(){
     num1 = Math.floor((Math.random()*7));
     num2 = Math.floor((Math.random()*7));
+}
+
+function resetPg(){
+
+    let Rbutton = document.getElementById("reset");
+
+    Rbutton.style.opacity = '1';
+
+    Rbutton.onclick = function(){
+        location.reload();
+    }
+
 }
 
 document.getElementById("btn0").onclick = function(){
@@ -53,10 +65,12 @@ document.getElementById("btn0").onclick = function(){
     
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
         document.getElementById("resutD").innerHTML = "You won!";  
+        resetPg()
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn1").onclick = function(){
@@ -96,11 +110,13 @@ document.getElementById("btn1").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg();  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn2").onclick = function(){
@@ -140,11 +156,13 @@ document.getElementById("btn2").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg()  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn3").onclick = function(){
@@ -184,11 +202,13 @@ document.getElementById("btn3").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg()  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn4").onclick = function(){
@@ -228,11 +248,13 @@ document.getElementById("btn4").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg()  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn5").onclick = function(){
@@ -272,11 +294,13 @@ document.getElementById("btn5").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg()  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
 document.getElementById("btn6").onclick = function(){
@@ -316,10 +340,12 @@ document.getElementById("btn6").onclick = function(){
     }
 
     else if(Druns >= Sruns && (Dwick != Swick || Dwick == Swick || click == chance || click < chance)){
-        document.getElementById("resutD").innerHTML = "You won!";  
+        document.getElementById("resutD").innerHTML = "You won!";
+        resetPg()  
     }
 
     else {
         document.getElementById("resutD").innerHTML = "Game Over!";
+        resetPg()
     }
 }
