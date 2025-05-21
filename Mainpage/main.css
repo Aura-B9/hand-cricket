@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    margin: 0 20px;
+}
+
+#info1 {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    font-family: "oswald";
+}
+
+#info2 {
+    font-size: 1rem;
+}
+
+#totalR {
+    margin-left: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    height: 300px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.user-run,
+.battle-run,
+.computer-run {
+    height: auto;
+    margin-top: 10%;
+    padding-top: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.battle-run {
+    border-left: 1.8px solid black;
+    border-right: 1.8px solid black;
+}
+
+main label {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    font-family: "ubuntu";
+}
+
+button{
+    font-size: 2rem;
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius:10px ;
+    border: 1px solid black;
+}
+
+.player-shots{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.reset-btn {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.reset-btn #reset{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
+    width: auto;
+    opacity: 0;
+    font-family: "varela round";
+    font-weight: 300;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;   
+    font-size: 1.5rem;
+    margin: 10px 0 30px 0;
+}

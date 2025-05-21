@@ -1,0 +1,54 @@
+button {
+    position: relative;
+    height: 50px;
+    padding: 0 30px;
+    border: 2px solid #000;
+    background: rgb(209, 230, 237);
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    font-family: inherit;
+}
+main .select button{
+    text-align: center;
+    font-family: "Varela Round";
+    margin-top: 20px;
+}
+button:before, button:after {
+    content: "";
+    position: absolute;
+    background:rgb(208, 234, 243);
+    transition: all .2s linear;
+}   
+button:before {
+    width: calc(100% + 6px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: -3px;
+}
+button:after {
+    width: calc(100% - 16px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: 8px;
+}
+button:hover {
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
+}
+button:hover:before {
+    height: calc(100% - 32px);
+    top: 16px;
+} 
+button:hover:after {
+    width: calc(100% - 32px);
+    left: 16px;
+}
+button span {
+    font-size: 1.4rem;
+    z-index: 3;
+    position: relative;
+    font-weight: 400;
+}
